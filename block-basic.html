@@ -5,14 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-.a{
+/* .a{
   background-color: red;
   margin: 20px 20px;
   padding: 0 70px;
+} */
+
+
+.a{
+  background-color: red;
+  margin: 1em;
+
+}
+.inner{
+  margin: auto;
+  width: 900px;
+  background-color: red;
 }
 
+.second{
+  background-color: red;
+  margin: 1em;
+  /* padding-left: calc((100% - 900px - 2em) / 2);
+  padding-right: calc((100% - 900px - 2em) / 2); */
+
+  padding: 0 calc((100% - 900px - 2em) / 2);
+
+}
+
+
 .e{border: solid 2px;
-  margin: 0 80px;
+  margin: auto;
+  width: 898px;
 
 }
 
@@ -34,32 +58,42 @@
 .b{
   margin: 10px 10px;
   box-sizing: content-box;
-  height: 100px;
-  overflow: auto;
-}
-
-.d{
-  margin: 10px 10px;
-  box-sizing: content-box;
-  height: 100px;
+  height: 80px;
   overflow: auto;
 }
 
 .f{
-  margin: auto;
+  /* margin: auto;
   margin-top: 70px;
   border-top: 100px solid white;
   border-right: 100px solid white;
   border-bottom: 100px solid orange;
   border-left: 100px solid white;
-  width: 1px;
+  width: 1px; */
+
+  border:  solid 70px;
+  border-color: red green blue purple;
+  height: 0;
+  width: 0;
+  margin: auto;
+  margin-top:10px;
+  border-color: transparent;
+  border-bottom-color: orange;
+
 
 }
   </style>
 </head>
 <body>
   <div class="a">
+    
+    <div class="inner">
     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque facere recusandae vero cupiditate eos delectus quidem eveniet provident quis ea consequuntur impedit beatae autem quam, sit at ab culpa nihil!
+    </div>
+    
+  </div>
+  <div class="second">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente iure illo blanditiis necessitatibus nisi qui debitis, facere ratione distinctio commodi amet? Labore at numquam omnis corrupti doloremque impedit exercitationem aliquid!
   </div>
 
   <div class="e">
@@ -72,7 +106,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, quas, culpa 
       
     </div>
 
-    <div class="d"> 
+    <div class="b"> 
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo ut molestias tempore dolorum laudantium ducimus nulla enim molestiae, nesciunt est laboriosam distinctio error consequuntur temporibus neque? Corrupti labore quisquam sequi.
     </div>
   </div>
