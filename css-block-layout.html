@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+
+.hello{
+  background-color: black;
+}
+
+.inner{
+  background-color: black;
+  color: white;
+  width: 600px;
+  margin: auto;
+}
+
+.page{
+  width: 600px;
+  margin: 20px auto;
+
+}
+
+.product{
+  width: 600px;
+  padding-left: calc((100% - 600px)/2) ;
+}
+
+.product div{
+  width: 180px;
+  height: 40px;
+  border: solid 3px;
+  margin: 15px 0 ;
+  text-align: center;
+  background-color: pink;
+  
+}
+.product div:hover{
+  background-color: red;
+
+}
+
+.product div:nth-child(n+5){
+  margin-left: 210px;
+
+}
+
+.product div:nth-child(n+9){
+  margin-left: 420px;
+
+}
+
+.product div:nth-child(5){
+  margin-top: -245px;
+  
+}
+.product div:nth-child(9){
+  margin-top: -245px;
+  
+}
+.p{
+  width: 600px;
+  margin: auto;
+}
+.p p{
+  border-bottom: black dotted;
+  margin: auto;
+  
+
+}
+.p p:last-child{
+  margin-bottom: -25px;
+  overflow: hidden;
+  padding-bottom: 20px;
+}
+
+
+.end{
+  background-color: plum;
+  
+}
+
+.w{
+  margin: auto;
+  width:200px ;
+
+}
+
+.a{
+  margin: auto;
+  width: 100px;
+}
+
+.end{
+  margin: 20px -10px;
+
+}
+  </style>
+</head>
+<body>
+  <div class="hello">
+    <div class="inner">
+      hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果
+    </div>
+  </div>
+  
+  <div class="page">
+页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px
+  </div>
+<div class="product">
+  <div>宽180高40(包含边框)</div>
+  <div>水平间隙30px</div>
+  <div>垂直间隙15px</div>
+  <div>边框宽度3px</div>
+  <div>产品1</div>
+  <div>产品2</div>
+  <div>产品3</div>
+  <div>产品4</div>
+  <div>产品5</div>
+  <div>产品6</div>
+  <div>产品7</div>
+  <div>产品8</div>
+</div>
+
+<div class="p">
+<p>link</p>
+<p>link</p>
+<p>link</p>
+<p>link</p>
+<p>link</p>
+</div>
+
+<div class="end">
+  <p class="a">
+    ©版权所有
+  </p>
+  <p class="w">
+    本页所有布局均使用块元素
+  </p>
+</div>
+</body>
+</html>
