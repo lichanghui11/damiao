@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+     *{
+      background-color: rgba(0 0 0 0.1);
+      box-shadow: inset 0 0 2px green;
+    }
+    section.b{
+      overflow: hidden;
+      width: 1240px;
+      margin: auto;
+      background-color: palegreen;
+    }
+
+    section.a{
+      width: 1226px;
+      margin-left: -7px;
+      margin-right: -7px;
+    }
+    div{
+      float: left;
+      margin: 7px;
+      
+    }
+
+    div:first-child{
+      width: 234px;
+      height: 614px;
+    }
+    div:first-child ~ div{
+      width: 234px;
+      height: 300px;
+    }
+    div:nth-child(8) ~ div{
+      width: 234px;
+      height: 143px;
+    }
+
+    main{
+      margin: auto;
+      width: 1226px;
+    }
+
+  </style>
+</head>
+<body>
+  <main>
+  <section class="a">
+    <section class="b">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </section>
+  <ection>
+  </main>
+</body>
+</html>
