@@ -166,40 +166,13 @@ section.top ul ul{
   height:460px;
 }
 section.top ul ul{
-  display: none;
-}
-section.top aside > ul > li:hover ul{
-  display: flex;
-  flex-basis: auto;
-  flex-flow: column wrap;
-  z-index: 999;
-}
-section.top ul ul li{
-  width: 265px;
-  height: 70px;
+  display: grid;
+  grid-template-rows: 76px  76px 76px 76px 76px 76px ;
+  grid-template-columns: auto;
 }
 
-section.main.side-show{
-  flex-grow: 1;
-}
-div.slides{
-  position:relative;
-}
 
-div.slides div.iphone{
-  width: 991px;
-  height: 460px;
-  object-fit: cover;
-  > img{
-    flex: 1 0 100%;
-    scroll-snap-align: start;
-  }
-}
 
-div.navigation{
-  position: absolute;
-  display: flex;
-  transform: translateX(-50%);
-  
-}
+
+
 

@@ -1,0 +1,79 @@
+
+
+html,body{
+  margin: 0;
+}
+section{
+  width: 200px;
+  height: 200px;
+  position: absolute;/*调整立方体容器的位置,使其位于页面中心*/
+  top: 50%;
+  left: 50%;/*上和左距离均相对于容器*/
+  transform: translate(-50%,-50%);/*该百分比相对于子元素自身*/
+  perspective: 100000000px;/*将观察点设定在容器的1000px 距离处*/
+  transform-style: preserve-3d;/*设置子元素位于3d空间中*/
+}
+
+div{
+  width: 200px;
+  height: 200px;
+  position: absolute;/*为了使立方体的每一个面都处在其容器内*/
+
+}
+
+/*给每一个面不同的颜色以方便观察*/
+
+div.top-side{
+  background-color: hsl(223, 100%, 75%);
+  transform: translatey(-100px) rotateX(90deg);/*使立方体的顶面上移自身的边长的一半, 绕X轴旋转90度.两个属性要写在一起, 否则无效*/
+}
+
+div.bottom-side{
+  background-color: hsl(146, 70%, 45%);
+  transform: translateY(100px) rotateX(90deg);/*底边下移自身边长的一半*/
+  /*沿着X轴旋转90度*/
+}
+
+div.left-side{
+  background-color: hsl(328, 87%, 37%);
+  transform: translateX(-100px) rotateY(90deg);/*左边左移自身边长的一半*/
+ /*沿着Y轴旋转90度*/
+}
+
+div.right-side{
+  background-color: hsl(256, 76%, 33%);
+  transform: translateX(100px) rotateY(90deg);/*右边右移自身边长的一半*/
+  /*沿着Y轴旋转90度*/
+}
+
+div.front-side{
+  background-color: hsl(175, 89%, 7%);
+  transform: translateZ(100px);/*将立方体的正面往前方移动自身边长的一半*/
+  
+}
+
+div.back-side{
+  background-color: hsl(55, 68%, 47%);
+  transform: translateZ(-100px);/*将立方体的背面往后移动自身边长的一半*/
+  
+}
+
+/*声明关键帧*/
+@keyframes rotate-cube {
+  0% { transform: rotateX(45deg) rotateY(45deg);}
+  25% { transform: rotateX(-45deg) rotateY(45deg);}
+  50% { transform: rotateX(-45deg) rotateY(-45deg);}
+  75% { transform: rotateX(45deg) rotateY(-45deg);}
+  100% { transform: rotateX(45deg) rotateY(45deg);}
+}
+
+section{
+  animation-name: rotate-cube;
+  animation-duration: 10000ms;
+  animation-timing-function: linear;
+  animation-fill-mode: backwards;
+  animation-iteration-count: infinite;
+}
+section:hover{
+  animation-play-state: paused;
+}

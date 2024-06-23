@@ -1,0 +1,33 @@
+div{
+  width: 200px;
+  height: 200px;
+  background-image: url(../有公转无自转/images/smile.jpg);/*导入图片*/
+  background-size: cover;/*图片不会被拉伸,以包含块的长度和宽度为标准进行裁剪*/
+  background-position: 50% 80%;/*背景图片位置,第一个值为水平方向上背景图片左边线距离容器左侧50%的位置,第二个值是垂直方向上背景图片上边线距离容器顶部80%的距离.  这里的百分比是相对于容器.*/
+  position: absolute;
+  border-radius: 50%;
+  /*设置一个容器,使容器自转,子元素就可以公转而不自转*/
+  
+}
+
+section{
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*以上属性将元素放置于页面中心*/
+
+  border: 2px solid ;
+  border-radius: 99999px;
+  animation: smile-revolution 10s infinite linear;
+}
+
+@keyframes smile-revolution {
+  100% {transform: translate(-50%, -50%) rotate(360deg);}
+}
+
+section div{
+  rotate: none;
+}
