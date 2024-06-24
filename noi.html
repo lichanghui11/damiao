@@ -411,22 +411,26 @@
 </script>
 
 
-<script type="wrong" id="ch0104/19">
+<script type="" id="ch0104/19">
   var a = Number(prompt("give me a number"))
   var b = Number(prompt("give me a number"))
   var o = toString(prompt("give me an operator(+ - * /)"))
 
+  var plus = "+"
+  var minus = "-"
+  var devide = "/"
+  var multiple = "*"
   if (o = "/" && b === 0)  {
     console.log("Divided by zero!");
-  } else if(o = "*") {
+  } else if(o = plus) {
     console.log(a + b);
-  } else if(o = "-") {
+  } else if(o = minus) {
     console.log(a - b);
-  } else if(o = "+") {
+  } else if(o = multiple) {
     console.log(a * b);
-  } else if(o = "/") {
+  } else if(o = devide) {
     console.log(a / b);
-  } else if( o != "+" && o != "-" && o != "*" && o != "/" ) {
+  } else if( o != plus && o != minus && o != multiple && o != devide ) {
     console.log("Invalid operator!");
 
 
