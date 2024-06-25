@@ -274,7 +274,7 @@
 
   if (n % 3 === 0 && n % 5 === 0) {
     console.log("YES")
-  } else {
+  } else { 
     console.log("NO")
   }
 </script>
@@ -285,17 +285,17 @@
 
   if (n % 3 === 0 && n % 5 === 0 && n % 7 === 0) {
     console.log("3" + ' ' + "5" + " " + "7")
-  } else if (n % 3 === 0 && n % 5 === 0 && n % 7 !== 0) {
+  } else if (n % 3 === 0 && n % 5 === 0) {
     console.log("3" + ' ' + "5")
-  } else if (n % 3 === 0 && n % 5 !== 0 && n % 7 === 0) {
+  } else if (n % 3 === 0 && n % 7 === 0) {
     console.log("3" + ' ' + "7")
-  } else if (n % 3 !== 0 && n % 5 === 0 && n % 7 === 0) {
+  } else if (n % 5 === 0 && n % 7 === 0) {
     console.log("5" + ' ' + "7")
-  } else if (n % 3 === 0 && n % 5 !== 0 && n % 7 !== 0) {
+  } else if (n % 3 === 0) {
     console.log("3")
-  } else if (n % 3 !== 0 && n % 5 === 0 && n % 7 !== 0) {
+  } else if (n % 5 === 0 ) {
     console.log("5")
-  } else if (n % 3 !== 0 && n % 5 !== 0 && n % 7 === 0) {
+  } else if (n % 7 === 0) {
     console.log("7")
   } else if (n % 3 !== 0 && n % 5 !== 0 && n % 7 !== 0) {
     console.log("n")
@@ -387,14 +387,12 @@
   }
 </script>
 
-<script type="done" id="ch0104/17">
+<script type="rr" id="ch0104/17">
   var a = Number(prompt("give me a number"))
 
-  if (a % 4 === 0 && a % 100 !== 0)  {
+  if (a % 4 === 0 && a % 100 !== 0 || a % 400 === 0)  {
     console.log("Y")
-  }  else if(a % 400 === 0) {
-    console.log("Y")
-  } else {
+  }  else {
     console.log('N')
   }
 </script>
@@ -411,30 +409,27 @@
 </script>
 
 
-<script type="" id="ch0104/19">
+<script type="done" id="ch0104/19">
   var a = Number(prompt("give me a number"))
   var b = Number(prompt("give me a number"))
-  var o = toString(prompt("give me an operator(+ - * /)"))
+  var o = prompt("give me an operator(+ - * /)")
 
-  var plus = "+"
-  var minus = "-"
-  var devide = "/"
-  var multiple = "*"
-  if (o = "/" && b === 0)  {
-    console.log("Divided by zero!");
-  } else if(o = plus) {
+  if(o === "+") {
     console.log(a + b);
-  } else if(o = minus) {
+  }else if(o === "-") {
     console.log(a - b);
-  } else if(o = multiple) {
+  }else if(o === "*") {
     console.log(a * b);
-  } else if(o = devide) {
-    console.log(a / b);
-  } else if( o != plus && o != minus && o != multiple && o != devide ) {
-    console.log("Invalid operator!");
+  }else if(o === "/") {
+    if(b === 0) {
+      console.log("Divided by zero!");
+    }else {
+      console.log(a / b);
+    }
+  } else {
+    console.log("Invalid operator!")
+  }
 
-
-  } 
 </script>
 
 
@@ -447,4 +442,118 @@
 
   console.log(result)
 
+</script>
+
+<script type="done" id="ch0105/01">
+  let n = Number(prompt("How many students are there?"));
+  let count = 0;
+  let num = 0;
+  while(count < n) {
+    let age = Number(prompt("age"));
+    num = num + age;
+    count = count + 1;
+  };
+  console.log((num / n).toFixed(2));
+
+
+</script>
+
+<script type="done" id="ch0105/02">
+  
+  let n = 0;
+  let num = 0;
+  let bill = 0;
+  while(n < 12) {
+    let bill = Number(prompt("give me a number."));
+    num += bill;
+    n += 1;
+  }
+  console.log("$" + (num / 12).toFixed(2))
+</script>
+
+<script type="done" id="ch0105/03">
+  
+  var n = Number(prompt("Sample size"));
+  var a = 0;
+  var num = 0;
+  while(a < n) {
+    var data = Number(prompt("Datas"));
+    num = num + data;
+    a = a + 1;
+}
+  console.log((num / n).toFixed(4))
+</script>
+
+<script type="done" id="ch0105/04">
+  
+  var n = Number(prompt("number size"));
+  var a = 0;
+  var num = 0;
+  while(a < n) {
+    var data = Number(prompt("Datas"));
+    num = num + data;
+    a = a + 1;
+}
+  console.log(num);
+  console.log((num / n).toFixed(5));
+</script>
+
+<script type="done" id="ch0105/05">
+  
+  var n = Number(prompt("students"));
+  var a = 0;
+  var max = 0;
+  while(a < n) {
+    var score = Number(prompt("scores"));
+    a = a + 1;
+    if(score > max) {
+      max = score;
+    } else {
+      max = max;
+    }
+}
+  console.log(max);
+</script>
+
+<script type="done" id="ch0105/06">
+  
+  var n = Number(prompt("'How many numbers?"));
+  var a = 0;
+  var max = 0;
+  var min = 1000;
+  while(a < n) {
+    var number = Number(prompt("numbers"));
+    a = a + 1;
+    if(number > max) {
+      max = number;
+    } else {
+      max = max;
+    };
+    if(number <= min) {
+      min = number;
+    } else {
+      min = min;
+    }
+}
+  console.log(max - min);
+</script>
+
+<script type="done" id="ch0105/08">
+  debugger
+  var m = Number(prompt("'How many countries?"));
+  var n = Number(prompt("'How many countries?"));
+  var a = 0;
+  var count = 0;
+  const m1 = m;
+  while(count < (n - m1 + 1)) {
+    if(m % 2 === 1) {
+      a = a + m;
+      m += 1;
+      count += 1;
+    } else {
+      m += 1;
+      count += 1;
+    }
+  };
+  console.log(a);
 </script>
