@@ -237,9 +237,9 @@
   }
 </script>
 
-<script type="DONE" id="ch0104/04">
+<script type="done" id="ch0104/04">
   var N = prompt("give me a number");
-  if(N.charCodeAt(1) % 2 !== 0) {
+  if(N.charCodeAt(1) % 2 === 1) {
     console.log("YES");
   } else {
     console.log("NO");
@@ -372,6 +372,24 @@
   }
 </script>
 
+<script type="done" id="ch0104/14">
+  var weight = +prompt("give me a number");
+  var emerge = prompt("是否加急？");
+  var total = 0;
+  var finalResult = 0;
+  if (weight <= 1000) {
+    total = 8;
+  } else {
+    total = 8 + Math.ceil((weight - 1000) / 500) * 4;
+  }
+  if (emerge = "y") {
+    finalResult = total + 5;
+  } else {
+    finalResult = total;
+  }
+  console.log(finalResult)
+</script>
+
 <script type="done" id="ch0104/15">
   var a = Number(prompt("give me a number"))
   var b = Number(prompt("give me a number"))
@@ -442,6 +460,56 @@
   }
 
 </script>
+
+<script type="wrong" id="ch0104/20.1">
+  console.log('debugger');
+  debugger
+  var a = Number(prompt("give me a number"));
+  var b = Number(prompt("give me a number"));
+  var c = Number(prompt("give me a number"));
+  
+  var delta = b * b - 4 * a * c;
+  var x1;
+  var x2;
+  if (delta === 0) {
+    var y1 = (-b) / (2 * a);
+    console.log(x1 + "=" + x2 + "=" + y1.toFixed(5));
+  } else if (delta > 0) {
+    var y1 = ((-b) + Math.sqrt(delta)) / (2 * a);
+    var y2 = ((-b) - Math.sqrt(delta)) / (2 * a);
+    console.log(x1 + '=' + y1.toFixed(5) + ';' x2 + '=' y2.toFixed(5));
+  } else {
+    var realPart = (-b) / (2 * a);
+    var imaginaryPart = Math.sqrt(delta);
+  
+    console.log(x1 + '=' realPart.toFixed(5) + '+' + inmaginaryPart + 'i' + ';' + x2 + '=' realPart.toFixed(5) + '+' + (-imaginaryPart) + 'i')
+  }
+</script>
+
+<script type="done" id="ch0104/20">
+  
+  var a = Number(prompt("give me a number"));
+  var b = Number(prompt("give me a number"));
+  var c = Number(prompt("give me a number"));
+  var delta = b * b - 4 * a * c;
+  var x1;
+  var x2;
+
+if (delta === 0) {
+    var y1 = (-b) / (2 * a);
+    console.log("x1 = x2 = " + y1.toFixed(5));
+} else if (delta > 0) {
+    var y1 = ((-b) + Math.sqrt(delta)) / (2 * a);
+    var y2 = ((-b) - Math.sqrt(delta)) / (2 * a);
+    console.log("x1 = " + y1.toFixed(5) + "; x2 = " + y2.toFixed(5));
+} else {
+    var realPart = (-b) / (2 * a);
+    var imaginaryPart = Math.sqrt(-delta) / (2 * a);
+    console.log("x1 = " + realPart.toFixed(5) + " + " + imaginaryPart.toFixed(5) + "i");
+    console.log("x2 = " + realPart.toFixed(5) + " - " + imaginaryPart.toFixed(5) + "i");
+}
+</script>
+
 
 
 <script type="done" id="ch0104/21">
@@ -537,16 +605,31 @@
     a = a + 1;
     if(number > max) {
       max = number;
-    } else {
-      max = max;
-    };
+    } 
     if(number <= min) {
       min = number;
-    } else {
-      min = min;
-    }
+    } 
 }
   console.log(max - min);
+</script>
+
+<script type="done" id="ch0105/07">
+
+var n = +prompt("give me a number");
+var totalGold = 0;
+var totalSilver = 0;
+var totalBronze = 0;
+for (let i = 0; i < n; i++) {
+  var gold = +prompt("give me a number");
+  var silver = +prompt("give me a number");
+  var bronze = +prompt("give me a number");
+  totalGold += gold;
+  totalSilver += silver;
+  totalBronze += bronze;
+}  
+var totalMetal = totalGold + totalSilver + totalBronze;
+console.log(totalGold, totalSilver, totalBronze, totalMetal);
+
 </script>
 
 <script type="done" id="ch0105/08">
