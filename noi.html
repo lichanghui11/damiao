@@ -461,9 +461,9 @@
 
 </script>
 
-<script type="wrong" id="ch0104/20.1">
-  console.log('debugger');
-  debugger
+<script type="done" id="ch0104/20">
+  
+  
   var a = Number(prompt("give me a number"));
   var b = Number(prompt("give me a number"));
   var c = Number(prompt("give me a number"));
@@ -473,20 +473,20 @@
   var x2;
   if (delta === 0) {
     var y1 = (-b) / (2 * a);
-    console.log(x1 + "=" + x2 + "=" + y1.toFixed(5));
+    console.log("x1" + "=" + "x2" + "=" + y1.toFixed(5));
   } else if (delta > 0) {
     var y1 = ((-b) + Math.sqrt(delta)) / (2 * a);
     var y2 = ((-b) - Math.sqrt(delta)) / (2 * a);
-    console.log(x1 + '=' + y1.toFixed(5) + ';' x2 + '=' y2.toFixed(5));
+    console.log("x1" + '=' + y1.toFixed(5) + ';' +  "x2" + '=' + y2.toFixed(5));
   } else {
     var realPart = (-b) / (2 * a);
-    var imaginaryPart = Math.sqrt(delta);
+    var inmaginaryPart = Math.sqrt(-delta)/ (2 * a);
   
-    console.log(x1 + '=' realPart.toFixed(5) + '+' + inmaginaryPart + 'i' + ';' + x2 + '=' realPart.toFixed(5) + '+' + (-imaginaryPart) + 'i')
+    console.log("x1" + '=' + realPart.toFixed(5) + '+' + inmaginaryPart.toFixed(5) + 'i' + ';' + "x2" + '=' + realPart.toFixed(5) + (-inmaginaryPart).toFixed(5) + 'i')
   }
 </script>
 
-<script type="done" id="ch0104/20">
+<script type="hh" id="ch0104/gpt">
   
   var a = Number(prompt("give me a number"));
   var b = Number(prompt("give me a number"));
@@ -667,6 +667,36 @@ console.log(totalGold, totalSilver, totalBronze, totalMetal);
   console.log(a);
 </script>
 
+<script type="done" id="ch0105/09.1">
+
+  var m = Number(prompt("enter a number"));
+  var n = Number(prompt("enter a number"));
+  var a = 0;
+  for (; m <= n; m++) {
+    if (m % 2 === 1) {
+      a += m;
+    }
+  }
+  console.log(a);
+</script>
+
+<script type="done" id="ch0105/09.2">
+  debugger
+  var m = Number(prompt("enter a number"));
+  var n = Number(prompt("enter a number"));
+  var a = 0;
+  for (; m <= n; m++) {
+    if (m % 2 === 0) {
+    m += 1;
+    };
+    if (n % 2 === 0) {
+      n -= 1;
+    };
+    a += m;
+  }
+  
+  console.log(a);
+</script>
 <script type="done" id="ch0105/10">
   
   var m = Number(prompt("Give me a number!"));
