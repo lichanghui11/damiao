@@ -784,29 +784,83 @@ console.log(totalGold, totalSilver, totalBronze, totalMetal);
 
 </script>
 
-<script type="done" id="ch0105/16">
+<script type="done" id="ch0105/15">
+  var r = Number(prompt("复合年利率"));
+  var m = Number(prompt("money"));
+  var y = Number(prompt("year"));
+  
+  for (var i = 0; i < y; i++) {
+    m = m * (1 + r / 100);
+  }
+ 
+  console.log(Math.trunc(m));
 
-  var n = Number(prompt("Give me a number!"));
-  var k = Number(prompt("Give me a number!"));
-  var house = 200;
-  var m = 0;
-  var salary = n * (m + 1);
-  while(salary < house) {
-    m++;
-    house = house + house * k /100;
-    salary = n * m ;
-    if(m > 20) {
-      break;
+</script>
+
+<script type="done" id="ch0105/16 ">
+  //房价起点为200 工资起点为零
+  var n = Number(prompt("annualSalary"));
+  var k = Number(prompt("growthRate"));
+  var housePrices = 200;
+  
+  for (var i = 0; i <= 20; i++) {
+    housePrices = housePrices * (1 + k / 100);
+    if (n < housePrices) {
+      n += 50;
+    } else {
+      console.log(i);
+    };
+    if (i = 20) {
+      console.log("Impossible")
     }
   }
-    if(m <= 20) {
-      console.log(m);
+  </script>
+
+  <script type="wrong" id="ch0105/16 ">
+  //房价起点为200， 工资起点为50
+  var n = Number(prompt("annualSalary"));
+  var k = Number(prompt("growthRate"));
+  var housePrices = 200;
+  
+  for (var i = 0; i <= 20; i++) {
+    
+    if (n < housePrices) {
+      n += 50;
+      housePrices = housePrices * (1 + k / 100);
     } else {
-      console.log('Impossible');
+      console.log(i);
+    };
+    if (i = 20) {
+      console.log("Impossible")
     }
+  }
   
 </script>
 
+<script type="done" id="0105/17">
+  var k = +prompt('give me a number');
+  var a = 1;
+  var b = 0;
+  var c = 0;
+  for (var i = 0; i < k; i++) {
+    c = a + b;
+    a = c - a;
+    b = c;
+  }
+  console.log(c);
+</script>
+
+<script type="done" id="0105/17.1">
+  var k = +prompt('give me a number');
+  var a = 1;
+  var b = 0;
+ 
+  for (var i = 0; i < k; i++) {
+    b = a + b;
+    a = b - a;
+  }
+  console.log(b);
+</script>
 <script type="done" id="ch0105/18">
 
   var count = 0;
@@ -845,16 +899,178 @@ console.log(totalGold, totalSilver, totalBronze, totalMetal);
   console.log(time);
 </script>
 
-<script type="DONE" id="ch0105/20">
-  debugger
-  var count = 0;
-  var h = Number(prompt("Give me a number!"));
+<script type="done" id="ch0105/20">
+  
+  var h = +prompt("height");
   var x = h;
-  while(count < 10) {
-    h = h / 2
-    count++;
-    x += h * 2;
-  };
-  console.log(x);
-  console.log(h);
+  var y = 0;
+  for (var i = 0; i < 10; i++) {
+    y += 2 * h;
+    h = h / 2;
+  }
+  console.log((y - x).toFixed(4));
+  console.log(h.toFixed(7));
 </script>
+
+<script type="done" id="ch0105/21">
+
+  var n = +prompt("give me a number");
+  do {
+    var x = n;
+    if (n % 2 === 1) {
+      n = n * 3 + 1;
+      console.log(x + '*' + '3' + '+' + '1' + '=' + n);
+    } else {
+      n = n / 2;
+      console.log(x + '/' + '2' + '=' + n);
+    }
+  } while (n % 2 !== 1)
+  console.log('End')
+</script>
+
+<script type="done" id="ch0105/22">
+  
+  var totalAmount;//记录最终总额
+  var salaryOwn = 0;//每月从妈妈那里拿到的
+  var salaryToMom = 0;//每月存到妈妈那里的
+  for (var i = 1; i <= 12; i++) {
+    salaryOwn += 300;
+    var budget = +prompt('每月预算');
+    if (salaryOwn < budget) {
+      console.log(-i);
+      break;
+    } else {
+      salaryOwn = salaryOwn - budget;
+      if (salaryOwn >= 100) {
+        var perMonth = Math.trunc(salaryOwn / 100) * 100//暂存每月存到妈妈那里的
+        salaryToMom += perMonth;
+        salaryOwn = salaryOwn - perMonth;
+      } 
+    }
+  }
+  totalAmount = salaryToMom * 1.2 + salaryOwn;
+  console.log(totalAmount)
+</script>
+
+<script type="done" id="ch0105/23">
+  debugger
+  var m = +prompt('药品总量');
+  var n = +prompt('取药人数');
+  var x = 0;//记录没取上人数
+  for (var i = 0; i < n; i++) {
+    var num = +prompt('取走数量');
+    if (m < num) {
+      x++;
+      continue;
+    } else {
+      m = m - num;
+    }
+  }
+  console.log(x);
+
+</script>
+
+<script type="done" id="ch0105/24">
+  
+var max = 0;//保存最大值
+var count = 0;//记录最长小时数
+var pressureTimes = +prompt('测量血压次数');
+for (var i = 0; i < pressureTimes; i++) {
+  var x = +prompt('收缩压');
+  var y = +prompt('舒张压');
+  if (x >= 90 && x <= 140 && y >= 60 && y <= 90) {
+    count++;
+    if (max < count) {
+      max = count;
+    }
+  } else {
+    if (max < count) {
+      max = count;
+      count = 0;
+    } else{
+      count = 0;
+    }
+  }
+}
+console.log(max);
+</script>
+<script type="wrong" id="ch0105/25.1">
+var decimal = +prompt('十进制');
+var one = decimal % 7;
+decimal = de
+</script>
+<script type="done" id="ch0105/26">
+  var count = 0;//记录满足条件的个数
+  var n = +prompt('四位数的个数');
+  for (var i = 0; i < n; i++) {
+    var x = +prompt('四位数');
+    var units = x % 10;
+    x = Math.trunc(x / 10);
+    var tens = x % 10;
+    x = Math.trunc(x / 10);
+    var hundreds = x % 10;
+    x = Math.trunc(x / 10);
+    var thousands = x % 10;
+    x = Math.trunc(x / 10); 
+    var y = units - thousands - hundreds - tens;
+    if (y > 0) {
+      count++;
+    }
+  }
+  console.log(count);
+</script>
+<script type="done" id="ch0105/27">
+
+var Sn = 0;
+var k = +prompt('一个整数');
+for (var i = 1; i <= k; i++) {
+  Sn += 1 / i;
+  if (Sn > k) {
+    break;
+  }
+} 
+console.log(i);
+</script>
+<script type="done" id="ch0105/28">
+var m = 0;//记录每个位置的数字
+var n = +prompt('一个整数');
+do {
+  m = n % 10;
+  n = Math.trunc(n / 10);
+  console.log(m);
+} while (n !== 0)
+</script>
+<script type="" id="ch0105/22">
+
+</script>
+<script type="" id="ch0105/30">
+  debugger
+var n = 0;//记录remainder的个数
+var i = 0;//记录3的个数
+var m = +prompt('give me a number');
+var x = m;//把m存起来
+var k = +prompt('希望有多少个3');
+do {
+  if (x % 19 === 0) {
+    n = m % 10 
+    if (n === 3) {
+      i++;
+    }
+    m = Math.trunc(m / 10);
+  } else {
+    console.log('NO');
+    break;
+  }
+} while (m !== 0);
+if (i === k) {
+  console.log('YES');
+} else {
+  console.log('NO');
+}
+</script>
+<script type="" id="ch0105/22">
+
+</script>
+
+
+
