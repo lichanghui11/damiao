@@ -963,7 +963,7 @@ console.log(totalGold, totalSilver, totalBronze, totalMetal);
 </script>
 
 <script type="done" id="ch0105/23">
-  debugger
+  
   var m = +prompt('药品总量');
   var n = +prompt('取药人数');
   var x = 0;//记录没取上人数
@@ -980,6 +980,23 @@ console.log(totalGold, totalSilver, totalBronze, totalMetal);
 
 </script>
 
+
+<script type="done" id="ch0105/23.1">
+  
+  var m = +prompt('药品总量');
+  var n = +prompt('取药人数');
+  var x = 0;//记录没取上人数
+  for (var i = 0; i < n; i++) {
+    var num = +prompt('取走数量');
+    if (m > num) {
+      m = m - num;
+    } else {
+      x++;
+    }
+  }
+  console.log(x);
+
+</script>
 <script type="done" id="ch0105/24">
   
 var max = 0;//保存最大值
@@ -1004,10 +1021,27 @@ for (var i = 0; i < pressureTimes; i++) {
 }
 console.log(max);
 </script>
-<script type="wrong" id="ch0105/25.1">
-var decimal = +prompt('十进制');
-var one = decimal % 7;
-decimal = de
+<script type="done" id="ch0105/25.1">
+  
+
+
+for (var i = 64; i < 666; i++) {
+
+  var units7 = i % 7;
+  var tens7 = (i - units7) / 7 % 7;
+  var hundreds7 = ((i - units7) / 7 - tens7) / 7;
+
+  var units9 = i % 9;
+  var tens9 = (i - units9) / 9 % 9;
+  var hundreds9 = ((i - units9) / 9 - tens9) / 9;
+
+  if (units7 === hundreds9 && tens7 === tens9 && hundreds7 === units9) {
+    break;
+  }
+} 
+console.log(i);
+console.log('' + hundreds7 + tens7 + units7);
+console.log('' + hundreds9 + tens9 + units9);
 </script>
 <script type="done" id="ch0105/26">
   var count = 0;//记录满足条件的个数
@@ -1033,7 +1067,7 @@ decimal = de
 
 var Sn = 0;
 var k = +prompt('一个整数');
-for (var i = 1; i <= k; i++) {
+for (var i = 1;; i++) {
   Sn += 1 / i;
   if (Sn > k) {
     break;
@@ -1050,8 +1084,22 @@ do {
   console.log(m);
 } while (n !== 0)
 </script>
-<script type="" id="ch0105/22">
-
+<script type="done" id="ch0105/29">
+  
+  var n = +prompt('一个整数');
+  var a =0;//用来存生成之后的数字
+  var x = 1;//控制符号
+  if (n < 0) {
+    var x = -1;
+    n *= x;
+  }
+  do {
+    a *= 10;
+    var b = n % 10;
+    n  = (n - b) / 10;
+    a = b + a;
+  } while (n !== 0)
+  console.log(a * x);
 </script>
 <script type="done" id="ch0105/30">
   debugger
@@ -1078,6 +1126,68 @@ if (i === k) {
   console.log('NO');
 }
 </script>
+
+
+<script type="" id="ch0105/22">
+
+</script>
+
+
+<script type="" id="ch0105/22">
+
+</script>
+
+
+<script type="" id="ch0105/22">
+
+</script>
+
+
+<script type="" id="ch0105/22">
+
+</script>
+
+
+<script type="" id="ch0105/22">
+
+</script>
+
+
+<script type="" id="ch0105/22">
+
+</script>
+
+
+<script type="" id="ch0105/22">
+
+</script>
+
+
+<script type="" id="ch0105/22">
+
+</script>
+
+
+<script type="" id="ch0105/22">
+
+</script>
+
+
+<script type="" id="ch0105/22">
+
+</script>
+
+
+<script type="" id="ch0105/22">
+
+</script>
+
+
+<script type="" id="ch0105/22">
+
+</script>
+
+
 <script type="" id="ch0105/22">
 
 </script>
