@@ -1021,7 +1021,7 @@ for (var i = 0; i < pressureTimes; i++) {
 }
 console.log(max);
 </script>
-<script type="done" id="ch0105/25.1">
+<script type="done" id="ch0105/25">
   
 
 
@@ -1128,47 +1128,137 @@ if (i === k) {
 </script>
 
 
-<script type="" id="ch0105/22">
+<script type="wrong" id="ch0105/31.">
+var n = +prompt('灯的数量');
+var m = +prompt('人的数量');
+var status = 0;//记录灯的状态
+for (var i = 1; i <= m; i++) {
+  do {
+
+  } while (false)
+}
 
 </script>
 
 
-<script type="" id="ch0105/22">
+<script type="done" id="ch0105/32">
+  
+var n = +prompt('n');
+var q = 1;
+var p = 1;
+var Sn = 0;//记录前n项的和
+for (var i = 0; i < n; i++) {
+  var bridge = p;
+  p = q;
+  q = q + bridge;
+
+  Sn += q / p;
+}
+console.log(Sn.toFixed(4));
+</script>
+
+
+<script type="done" id="ch0105/33">
+  
+var n = +prompt('n');
+var x = -1;//记录符号
+var y = 0;//记录总和
+for (var i = 1; i <= n; i++) {
+  y += (x ** (i - 1)) / i;
+}
+console.log(y.toFixed(4));
+</script>
+
+
+<script type="done" id="ch0105/34">
+  
+  var n = +prompt('n');
+  var y = 0;//记录总和
+  var x = 1;//记录每次阶乘的计算结果
+   for (var i = 1; i <= n; i++) {
+    x *= i;
+    y += x;
+   }
+   console.log(y);
+</script>
+
+
+<script type="done" id="ch0105/35">
+  
+  var n = +prompt('n');
+  var sum = 1;
+  var x = 1;//记录阶乘
+  for (var i = 1; i <= n; i++) {
+    x *= i;
+    sum  += 1 / x;
+
+  }
+  console.log(sum.toFixed(10));
+</script>
+
+
+<script type="done" id="ch0105/36">
+  
+var x = +prompt('');
+var n = +prompt('n');
+var y = 0;
+for (var i = 1; i <= (n + 1); i++) {
+  y += x ** (i - 1);
+}
+console.log(y.toFixed(2));
+</script>
+
+
+<script type="wrong" id="ch0105/37.">
+  debugger
+var m = +prompt('体力最大值');
+var n = +prompt('战斗力');
+var x = +prompt('能量元素');
+var a = Math.trunc(m / n);//储存战斗力
+var b = m % n;//记录剩余不连续天数， 以便和下一次一起计算
+for (var i = 0; i < x; i++) {
+  b += m;
+  a += Math.trunc(b / n);
+  b = b % n;
+}
+console.log(a);
+
+
+
 
 </script>
 
 
-<script type="" id="ch0105/22">
-
+<script type="done" id="ch0105/38">
+  
+  var n = +prompt('输入数据有多少组');
+  
+  for (var i = 0; i < n; i++) {
+    var exp = +prompt('输入最高次幂');
+    var e = exp;
+    if (exp === 0) {
+      prompt("这是一个底数");
+      console.log(0);
+    } else {
+      for (var j = 0; j <= e; j++) {
+        var base = +prompt('输入底数');
+        if (j !== e) {
+          console.log(exp * base);
+        }
+        exp--;
+      }
+    }
+  }
+  
 </script>
 
 
-<script type="" id="ch0105/22">
+<script type="wrong" id="ch0105/39.">
+  var n = +prompt('');
+  for (var i = 1; i <= n; i++) {
+    if (i % 7 !== 0 )
 
-</script>
-
-
-<script type="" id="ch0105/22">
-
-</script>
-
-
-<script type="" id="ch0105/22">
-
-</script>
-
-
-<script type="" id="ch0105/22">
-
-</script>
-
-
-<script type="" id="ch0105/22">
-
-</script>
-
-
-<script type="" id="ch0105/22">
+  }
 
 </script>
 
