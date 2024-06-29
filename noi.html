@@ -797,44 +797,50 @@ console.log(totalGold, totalSilver, totalBronze, totalMetal);
 
 </script>
 
-<script type="done" id="ch0105/16">
-  //房价起点为200 工资起点为零
+<script type="done" id="ch0105/16.1">
+  //房价起点为200 工资起点为零,也就是说手里有一年年薪的时候，房价已经涨过一回，为200万以上。
   var n = Number(prompt("annualSalary"));
   var k = Number(prompt("growthRate"));
+  var totalSalary = 0;//记录攒钱总额
   var housePrices = 200;
-  
-  for (var i = 0; i <= 20; i++) {
+  var buyed = false;//记录购买状态
+  for (var i = 1; i <= 20; i++) {
     housePrices = housePrices * (1 + k / 100);
-    if (n < housePrices) {
-      n += 50;
-    } else {
+    totalSalary += n;
+    
+    if (totalSalary >= housePrices) {
       console.log(i);
-    };
-    if (i = 20) {
-      console.log("Impossible")
+      break;
+      buyed = true;
     }
   }
+  if (!buyed) {
+    console.log("Impossible")
+  }
+  
   </script>
 
-  <script type="wrong" id="ch0105/16.1">
-  //房价起点为200; 工资起点为50
-  var n = Number(prompt("annualSalary"));
-  var k = Number(prompt("growthRate"));
-  var housePrices = 200;
-  
-  for (var i = 0; i <= 20; i++) {
+  <script type="done" id="ch0105/16">
     
-    if (n < housePrices) {
-      n += 50;
-      housePrices = housePrices * (1 + k / 100);
-    } else {
+  //房价起点为200; 工资起点为一年年薪
+   var n = Number(prompt("annualSalary"));
+  var k = Number(prompt("growthRate"));
+  var totalSalary = 0;//记录攒钱总额
+  var housePrices = 200;
+  var buyed = false;//记录购买状态
+  for (var i = 1; i <= 20; i++) {
+    totalSalary += n;
+    
+    if (totalSalary >= housePrices) {
       console.log(i);
-    };
-    if (i = 20) {
-      console.log("Impossible")
+      buyed = true;
+      break;
     }
+    housePrices = housePrices * (1 + k / 100);
   }
-  
+  if (!buyed) {
+    console.log("Impossible")
+  }
 </script>
 
 <script type="done" id="ch0105/17">
@@ -933,12 +939,14 @@ console.log(totalGold, totalSilver, totalBronze, totalMetal);
   var totalAmount;//记录最终总额
   var salaryOwn = 0;//每月从妈妈那里拿到的
   var salaryToMom = 0;//每月存到妈妈那里的
+  var 预算不足 = false;//记录状态
   for (var i = 1; i <= 12; i++) {
     salaryOwn += 300;
     var budget = +prompt('每月预算');
     if (salaryOwn < budget) {
       console.log(-i);
-      break;
+      预算不足 = true;
+      
     } else {
       salaryOwn = salaryOwn - budget;
       if (salaryOwn >= 100) {
@@ -948,8 +956,10 @@ console.log(totalGold, totalSilver, totalBronze, totalMetal);
       } 
     }
   }
-  totalAmount = salaryToMom * 1.2 + salaryOwn;
-  console.log(totalAmount)
+  if (!预算不足) {
+    totalAmount = salaryToMom * 1.2 + salaryOwn;
+    console.log(totalAmount)
+  }
 </script>
 
 <script type="done" id="ch0105/23">
