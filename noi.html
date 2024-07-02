@@ -1516,12 +1516,12 @@ function isRelated7 (x) {
   }
 }
 </script>
-<script id="narcissistic">
+<script type="done" id="narcissistic">
   var x = +prompt()
   if (narcissistic(x)) {
-    console.log(true)
+    console.log('YES')
   } else {
-    console.log(false)
+    console.log('NO')
   }
   function narcissistic (x) {
     
@@ -1549,8 +1549,152 @@ function isRelated7 (x) {
     }
   }
 </script>
-<script id="">
+<script type="" id="narcissistics">
+  function narcissistic (x) {
+    
+    var result = 0
+    if (x < 0) {
+      return false 
+    }
+    var m = 0 //记录数字有多少位
+    var a = x //把x存起来
+    var b = x //把x存起来
+    do {
+      if (x % 10 >= 0) {
+        m++ 
+        x = (x - x % 10) / 10
+      } 
+    } while (x > 0)
+    for (var i = 0; i < m; i++) {
+      result += (a % 10) ** m
+      a = (a - a % 10) / 10
+    }
+    if (result === b) {
+      return true
+    } else {
+      return false
+    }
+  }
+  for (var i = 1; i < 10000; i++) {
+    if (narcissistic(i)) {
+      console.log(i)
+    }
+  }
+</script>
 
+<script id="palindrom">
+  function isEvenDigit(x) {
+    var m = 0//记录数字有多少位
+    var 暂存 = x
+    do {
+      m++
+      暂存 = (暂存 - 暂存 % 10) / 10
+    } while (暂存 > 0)
+    if (m % 2 === 0) {
+      return true
+    } else {
+      return false
+    } 
+  }
+
+  function isOddDigit(x) {
+    var m = 0//记录数字有多少位
+    do {
+      m++
+      x = (x - x % 10) / 10
+    } while (x > 0)
+    if (m % 2 !== 0) {
+      return true
+    } else {
+      return false
+    } 
+  }
+
+  function isSingleDigit (x) {
+    
+    var 暂存 = x
+    var m = 0//记录数字有多少位
+    do {
+      m++
+      暂存 = (暂存 - 暂存 % 10) / 10
+    } while (暂存 > 0)
+    if (m === 1) {
+      return true
+    } else {
+      return false
+    } 
+  }
+  function palindrom (x) {
+    if (x < 0) {
+      return false
+    } else if (isSingleDigit(x)) {
+      return true
+    } else if (isEvenDigit (x)) {
+      var b = x //把x存起来
+      var a = x //把x存起来
+      var c = x //把x存起来
+      var m = 0//记录数字有多少位
+      do {
+        m++
+        x = (x - x % 10) / 10
+      } while (x > 0)
+
+      var result1 = 0//计算每一位数字的和
+      var result2 = 0//计算一半的数字和
+
+      for (var i = 0; i < m; i++) {
+        var single = a % 10
+        a = (a - single) / 10 
+        result1 += single 
+      }
+      for (var j = 0; j < m / 2; j++) {
+        var single2 = b % 10
+        b = (b - single2) / 10
+        result2 += single2
+      }
+      if (result1 / 2 === result2) {
+        return true
+      } else {
+        return false
+      }
+    } else if (isOddDigit) {
+      var a = x 
+      var b = x 
+      var c = x
+      var result1 = 0
+      var result2 = 0
+      var resultMiddle = 0
+      do {
+        m++
+        x = (x - x % 10) / 10
+      } while (x > 0)
+      for (var i = 0; i < m; i++) {
+        result1 += a % 10
+        a = (a - a % 10) / 10 
+      } 
+      for (var j = 0; j < (m / 2 - 1); j++) {
+        result2 += b % 10
+        b = (b - b % 10) / 10
+      }
+      for (var k = 0; k < ((m - 1) / 2) + 1; k++) {
+        resultMiddle = c % 10
+        c = (c - c % 10) / 10
+      }
+      if (result1 - result2 === resultMiddle) {
+        return true
+      } else {
+        return false
+      }
+    } else {
+      return false
+    }
+  }
+  var x = +prompt()
+  if (palindrom(x)) {
+    console.log('YES')
+  } else { 
+    console.log('NO')
+  }
 </script>
 <script id="">
 
