@@ -1700,7 +1700,7 @@ function isRelated7 (x) {
 <script id="weekday">
 
 </script>
-<script type="" id="complete-number">
+<script type="" id="complete-number.">
   function perfectNumber (x) {
     if (x <= 0) {
       return false
@@ -1724,8 +1724,9 @@ function isRelated7 (x) {
     }
   }
   function isPrime (x) {
-    
-    if (x < 0) {
+    if (x === 1) {
+      return false
+    } else if (x < 0) {
       return false
     } else if (!isInteger) {
       return false
@@ -1784,9 +1785,34 @@ function isRelated7 (x) {
 </script>
 
 <script type="" id="lcf&lcm">
-
+  //先比较大小
+  var x = +prompt()
+  var y = +prompt()
+  var large = 0 //存较大的数
+  var small = 0 //存较小的数
+  if (x > y) {
+    large = x
+    small = y
+  } else {
+    large = y 
+    small = x
+  }
+  var maxGcd = 0 //存最大的公约数
+  var minLcm = 0 //存最小公倍数
+  for (var i = 2; i <= small; i++) {   
+    if (small % i === 0 && large % i === 0) {
+      maxGcd = i
+    }
+  }
+  do {
+    small += small
+    large += large
+    minLcm = large
+  } while (!small === large)
+  console.log(maxGcd, minLcm)
 </script>
 
-<script type="" id="sqrt">
-
+<script type="wrong" id="sqrt.">
+  var x = +prompt()
+  var x = 
 </script>
