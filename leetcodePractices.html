@@ -1,0 +1,78 @@
+<html>
+<script id="happyNumber">
+  function isHappy (n) {
+    do{
+      while (n < 10) {
+        if (n === 1) {
+        return true
+        }
+      n = n * n
+      } 
+      while (n > 0) {
+        var result = 0
+        result += (n % 10) * (n % 10)
+        n = (n - n % 10) / 10
+        if (result === 1) {
+          return true
+        }
+      }
+    } while ()
+    
+  }
+
+</script>
+
+<script id="upStairs">
+  function upStairs (n = 0, ready = 'ready') {
+    
+    if (n > 21) {
+      return
+    } else if (n === 21) {
+      console.log(ready)
+      return 
+    }
+    upStairs (n + 3, ready + ' +3')
+    upStairs (n + 2, ready + ' +2')
+  }
+
+</script>
+
+<script id="数组练习">
+  
+
+</script>
+<script id="id">
+
+</script>
+<script id="id">
+
+</script>
+<script id="id">
+
+</script>
+<script id="id">
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="id">
+
+</script>
+
+
+
+
+
+
+</html>
